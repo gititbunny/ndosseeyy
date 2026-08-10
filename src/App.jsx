@@ -9,6 +9,7 @@ import ConceptDetail from "./pages/ConceptDetail";
 import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Media from "./pages/Media";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/work" element={<Work />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );
