@@ -1,0 +1,396 @@
+/* ========================================
+   SERVICES PAGE
+======================================== */
+
+.services-page {
+  width: 100%;
+}
+
+
+/* ========================================
+   SERVICES INTRODUCTION
+======================================== */
+
+.services-intro {
+  padding: 140px 40px 100px;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.services-intro-top {
+  margin-bottom: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.services-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.services-intro-top span {
+  font-size: 0.7rem;
+  opacity: 0.55;
+}
+
+.services-intro-content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: end;
+  gap: 70px;
+}
+
+.services-intro h1 {
+  max-width: 1050px;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.services-intro-content > p {
+  max-width: 420px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CORE SERVICES
+======================================== */
+
+.services-list {
+  width: 100%;
+}
+
+.service-row {
+  min-height: 620px;
+  padding: 70px 40px;
+
+  display: grid;
+  grid-template-columns: 0.18fr 1.1fr 0.72fr;
+  gap: 50px;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.service-number span {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
+}
+
+.service-main {
+  max-width: 760px;
+}
+
+.service-statement {
+  margin-bottom: 35px;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+
+.service-main h2 {
+  max-width: 700px;
+
+  font-size: clamp(3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.service-description {
+  max-width: 570px;
+  margin-top: 35px;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.service-link {
+  display: inline-block;
+
+  margin-top: 45px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+.service-details {
+  padding-left: 35px;
+
+  border-left: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.service-price {
+  margin-bottom: 45px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-price span {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+
+.service-price strong {
+  font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.service-details ul {
+  list-style: none;
+}
+
+.service-details li {
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+
+  font-size: 0.78rem;
+}
+
+
+/* ========================================
+   ADDITIONAL OFFERINGS
+======================================== */
+
+.service-addons {
+  padding: 130px 40px;
+}
+
+.service-addons-heading {
+  margin-bottom: 70px;
+}
+
+.service-addons-heading h2 {
+  max-width: 900px;
+  margin-top: 50px;
+
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.service-addons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-addon {
+  min-height: 520px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(17, 17, 17, 0.25);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.service-addon:hover {
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.service-addon-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.service-addon-content h3 {
+  max-width: 500px;
+
+  font-size: clamp(2.2rem, 4vw, 4.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.service-addon-content p {
+  max-width: 500px;
+  margin-top: 30px;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.service-addon-content a {
+  display: inline-block;
+
+  margin-top: 35px;
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   SERVICES ENDING
+======================================== */
+
+.services-ending {
+  padding: 100px 40px;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.services-ending > div {
+  margin-top: 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.services-ending h2 {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.services-ending a {
+  flex-shrink: 0;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.78rem;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .services-intro-content {
+    grid-template-columns: 1fr;
+  }
+
+  .services-intro-content > p {
+    max-width: 650px;
+  }
+
+  .service-row {
+    grid-template-columns: 0.15fr 1fr;
+  }
+
+  .service-details {
+    grid-column: 2;
+    padding-top: 30px;
+    padding-left: 0;
+
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+    border-left: 0;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .services-intro {
+    padding: 115px 24px 75px;
+  }
+
+  .services-intro-top {
+    margin-bottom: 55px;
+  }
+
+  .services-intro-top span {
+    display: none;
+  }
+
+  .services-intro h1 {
+    font-size: clamp(3.7rem, 17vw, 6rem);
+  }
+
+  .service-row {
+    min-height: auto;
+    padding: 65px 24px;
+
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-main h2 {
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .service-details {
+    grid-column: auto;
+
+    margin-top: 20px;
+  }
+
+  .service-addons {
+    padding: 90px 24px;
+  }
+
+  .service-addons-heading {
+    margin-bottom: 50px;
+  }
+
+  .service-addons-heading h2 {
+    margin-top: 35px;
+
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .service-addons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-addon {
+    min-height: 460px;
+  }
+
+  .services-ending {
+    padding: 80px 24px;
+  }
+
+  .services-ending > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-ending h2 {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+}
