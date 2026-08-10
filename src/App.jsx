@@ -1,18 +1,11 @@
-import "./App.css";
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <main className="site-shell">
-      <section className="foundation-screen">
-        <p className="foundation-label">NDOSSEEYY</p>
-
-        <h1>Creative ideas, built beautifully.</h1>
-
-        <p className="foundation-description">
-          The NDOSSEEYY website is taking shape.
-        </p>
-      </section>
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
