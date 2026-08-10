@@ -1,6 +1,8 @@
+import { Link } from "react-router";
 import "../styles/ConceptCard.css";
 
 function ConceptCard({
+  slug,
   number,
   title,
   category,
@@ -9,8 +11,13 @@ function ConceptCard({
   featured = false,
 }) {
   return (
-    <article className={`concept-card ${featured ? "concept-card-featured" : ""}`}>
-      {/* Concept Visual */}
+    <Link
+      to={`/concepts/${slug}`}
+      className={`concept-card ${featured ? "concept-card-featured" : ""}`}
+    >
+      {/* ========================================
+          CONCEPT VISUAL
+      ======================================== */}
       <div className="concept-card-visual">
         {image ? (
           <img src={image} alt={title} />
@@ -25,7 +32,9 @@ function ConceptCard({
         </div>
       </div>
 
-      {/* Concept Information */}
+      {/* ========================================
+          CONCEPT INFORMATION
+      ======================================== */}
       <div className="concept-card-info">
         <div>
           <p className="concept-card-number">{number}</p>
@@ -34,7 +43,7 @@ function ConceptCard({
 
         <p className="concept-card-category">{category}</p>
       </div>
-    </article>
+    </Link>
   );
 }
 
