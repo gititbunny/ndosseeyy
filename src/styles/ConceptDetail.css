@@ -1,0 +1,477 @@
+/* ========================================
+   CONCEPT DETAIL PAGE
+======================================== */
+
+.concept-detail-page {
+  width: 100%;
+}
+
+
+/* ========================================
+   CONCEPT HEADER
+======================================== */
+
+.concept-detail-header {
+  padding: 150px 40px 70px;
+}
+
+.concept-detail-meta {
+  margin-bottom: 70px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.concept-detail-status {
+  margin-left: auto;
+  padding: 8px 12px;
+
+  font-weight: 600;
+}
+
+.status-available {
+  border: 1px solid #111111;
+}
+
+.status-acquired {
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.concept-detail-header h1 {
+  max-width: 1200px;
+
+  font-size: clamp(5rem, 13vw, 13rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+}
+
+.concept-detail-description {
+  max-width: 550px;
+  margin-top: 55px;
+  margin-left: auto;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   MAIN CONCEPT MEDIA
+======================================== */
+
+.concept-detail-featured-media {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.concept-detail-featured-media img,
+.concept-detail-media-placeholder {
+  width: 100%;
+  min-height: 75vh;
+}
+
+.concept-detail-featured-media img {
+  object-fit: cover;
+}
+
+.concept-detail-media-placeholder {
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  background: #d8d4cc;
+}
+
+.concept-detail-media-placeholder span {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.concept-detail-media-placeholder p {
+  font-size: 0.75rem;
+  opacity: 0.55;
+}
+
+
+/* ========================================
+   CONCEPT INTRODUCTION
+======================================== */
+
+.concept-detail-intro {
+  padding: 140px 40px;
+}
+
+.concept-detail-section-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.concept-detail-intro-grid {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 80px;
+}
+
+.concept-detail-intro h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.concept-detail-intro-grid > p {
+  max-width: 470px;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   PUBLIC CONCEPT PREVIEW
+======================================== */
+
+.concept-preview {
+  padding: 40px 40px 140px;
+}
+
+.concept-preview-heading {
+  padding-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  border-bottom: 1px solid #111111;
+}
+
+.concept-preview-heading > p:last-child {
+  max-width: 350px;
+
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.concept-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.concept-preview-item {
+  min-height: 220px;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(17, 17, 17, 0.2);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.concept-preview-item:nth-child(3n) {
+  border-right: 0;
+}
+
+.concept-preview-item span {
+  font-size: 0.65rem;
+  opacity: 0.5;
+}
+
+.concept-preview-item p {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+
+/* ========================================
+   LOCKED CONCEPT AREA
+======================================== */
+
+.concept-locked-section {
+  position: relative;
+
+  min-height: 760px;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.concept-locked-content {
+  min-height: 760px;
+  padding: 80px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  filter: blur(9px);
+  opacity: 0.35;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+.locked-column {
+  min-height: 420px;
+  padding: 30px;
+
+  border: 1px solid rgba(17, 17, 17, 0.25);
+}
+
+.locked-column p:first-child {
+  margin-bottom: 40px;
+
+  font-size: 1.5rem;
+}
+
+.locked-column p:last-child {
+  line-height: 1.8;
+}
+
+.concept-locked-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  padding: 60px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(244, 241, 235, 0.4);
+}
+
+.concept-locked-overlay h2 {
+  max-width: 800px;
+  margin-top: 25px;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.concept-locked-overlay > p:not(.concept-detail-section-label) {
+  max-width: 520px;
+  margin-top: 30px;
+
+  line-height: 1.7;
+}
+
+.concept-acquisition-info {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.concept-acquisition-info span {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+}
+
+.concept-acquisition-info strong {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.concept-acquire-button {
+  margin-top: 30px;
+  padding: 15px 22px;
+
+  border: 1px solid #111111;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.concept-acquire-button:hover {
+  background: #111111;
+  color: #f4f1eb;
+}
+
+
+/* ========================================
+   BACK TO ARCHIVE
+======================================== */
+
+.concept-back-section {
+  padding: 60px 40px 100px;
+}
+
+.concept-back-section a {
+  font-size: 0.8rem;
+
+  border-bottom: 1px solid currentColor;
+}
+
+
+/* ========================================
+   CONCEPT NOT FOUND
+======================================== */
+
+.concept-not-found {
+  min-height: 100vh;
+  padding: 120px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.concept-not-found p {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: -0.05em;
+}
+
+.concept-not-found a {
+  border-bottom: 1px solid currentColor;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .concept-detail-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .concept-preview-item:nth-child(3n) {
+    border-right: 1px solid rgba(17, 17, 17, 0.2);
+  }
+
+  .concept-preview-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .concept-locked-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .concept-detail-header {
+    padding: 120px 24px 50px;
+  }
+
+  .concept-detail-meta {
+    margin-bottom: 50px;
+    gap: 12px;
+  }
+
+  .concept-detail-meta p:nth-child(2) {
+    display: none;
+  }
+
+  .concept-detail-header h1 {
+    font-size: clamp(4.5rem, 22vw, 7rem);
+  }
+
+  .concept-detail-description {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  .concept-detail-featured-media {
+    padding: 0 24px;
+  }
+
+  .concept-detail-featured-media img,
+  .concept-detail-media-placeholder {
+    min-height: 60vh;
+  }
+
+  .concept-detail-intro {
+    padding: 100px 24px;
+  }
+
+  .concept-detail-intro-grid {
+    gap: 40px;
+  }
+
+  .concept-preview {
+    padding: 20px 24px 100px;
+  }
+
+  .concept-preview-heading {
+    flex-direction: column;
+  }
+
+  .concept-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-preview-item,
+  .concept-preview-item:nth-child(2n),
+  .concept-preview-item:nth-child(3n) {
+    border-right: 0;
+  }
+
+  .concept-preview-item {
+    min-height: 170px;
+  }
+
+  .concept-locked-section,
+  .concept-locked-content {
+    min-height: 700px;
+  }
+
+  .concept-locked-content {
+    padding: 50px 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .concept-locked-overlay h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .concept-back-section {
+    padding: 50px 24px 80px;
+  }
+
+  .concept-not-found {
+    padding: 100px 24px;
+  }
+}
