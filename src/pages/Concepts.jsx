@@ -1,10 +1,12 @@
+import ConceptCard from "../components/ConceptCard";
+import conceptsData from "../data/conceptsData";
 import "../styles/Concepts.css";
 
 function Concepts() {
   return (
     <main className="concepts-page">
       {/* ========================================
-          CONCEPTS HERO
+          CONCEPTS INTRODUCTION
       ======================================== */}
       <section className="concepts-hero">
         <div className="concepts-hero-top">
@@ -57,52 +59,35 @@ function Concepts() {
       </section>
 
       {/* ========================================
-          TEMPORARY CONCEPT ARCHIVE
+          CONCEPT ARCHIVE
       ======================================== */}
       <section className="concepts-archive">
         <div className="concepts-archive-heading">
           <p className="concepts-section-label">Explore the Archive</p>
-          <p className="concepts-count">Concepts coming soon</p>
+
+          <p className="concepts-count">
+            {conceptsData.length}{" "}
+            {conceptsData.length === 1 ? "Concept" : "Concepts"}
+          </p>
         </div>
 
         <div className="concept-placeholder-grid">
-          <article className="concept-placeholder concept-placeholder-large">
-            <div className="concept-placeholder-visual">
-              <span>ND / 001</span>
-            </div>
-
-            <div className="concept-placeholder-info">
-              <p>Concept 001</p>
-              <span>Coming Soon</span>
-            </div>
-          </article>
-
-          <article className="concept-placeholder">
-            <div className="concept-placeholder-visual">
-              <span>ND / 002</span>
-            </div>
-
-            <div className="concept-placeholder-info">
-              <p>Concept 002</p>
-              <span>Coming Soon</span>
-            </div>
-          </article>
-
-          <article className="concept-placeholder">
-            <div className="concept-placeholder-visual">
-              <span>ND / 003</span>
-            </div>
-
-            <div className="concept-placeholder-info">
-              <p>Concept 003</p>
-              <span>Coming Soon</span>
-            </div>
-          </article>
+          {conceptsData.map((concept) => (
+            <ConceptCard
+              key={concept.id}
+              number={concept.number}
+              title={concept.title}
+              category={concept.category}
+              status={concept.status}
+              image={concept.image}
+              featured={concept.featured}
+            />
+          ))}
         </div>
 
         <p className="concepts-placeholder-note">
-          These are temporary development placeholders. Your real concepts will
-          replace them as we build the archive.
+          Development placeholders for now. Real NDOSSEEYY concepts and imagery
+          will replace these as the archive grows.
         </p>
       </section>
     </main>
