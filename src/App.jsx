@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Concepts from "./pages/Concepts";
 import ConceptDetail from "./pages/ConceptDetail";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/concepts" element={<Concepts />} />
         <Route path="/concepts/:slug" element={<ConceptDetail />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </>
   );
