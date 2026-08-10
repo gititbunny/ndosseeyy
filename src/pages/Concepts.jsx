@@ -75,6 +75,7 @@ function Concepts() {
           {conceptsData.map((concept) => (
             <ConceptCard
               key={concept.id}
+              slug={concept.slug}
               number={concept.number}
               title={concept.title}
               category={concept.category}
