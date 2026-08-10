@@ -1,0 +1,292 @@
+/* ========================================
+   CONCEPTS PAGE
+======================================== */
+
+.concepts-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CONCEPTS HERO
+======================================== */
+
+.concepts-hero {
+  min-height: 100vh;
+  padding: 120px 40px 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.concepts-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.concepts-hero-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.concepts-hero h1 {
+  max-width: 1050px;
+
+  font-size: clamp(4rem, 10vw, 9.5rem);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.065em;
+}
+
+.concepts-hero-description {
+  max-width: 390px;
+
+  margin-bottom: 12px;
+
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   ARCHIVE INTRODUCTION
+======================================== */
+
+.concepts-intro {
+  padding: 120px 40px;
+}
+
+.concepts-section-label {
+  margin-bottom: 50px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.concepts-intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 80px;
+}
+
+.concepts-intro h2 {
+  max-width: 900px;
+
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.concepts-intro-copy {
+  max-width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CONCEPT ARCHIVE
+======================================== */
+
+.concepts-archive {
+  padding: 40px 40px 120px;
+}
+
+.concepts-archive-heading {
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.concepts-archive-heading .concepts-section-label {
+  margin-bottom: 0;
+}
+
+.concepts-count {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+
+/* ========================================
+   TEMPORARY CONCEPT CARDS
+======================================== */
+
+.concept-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.concept-placeholder {
+  min-width: 0;
+}
+
+.concept-placeholder-large {
+  grid-column: 1 / -1;
+}
+
+.concept-placeholder-visual {
+  min-height: 500px;
+  padding: 24px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  background: #d8d4cc;
+
+  overflow: hidden;
+
+  transition: transform 0.4s ease;
+}
+
+.concept-placeholder-large .concept-placeholder-visual {
+  min-height: 720px;
+}
+
+.concept-placeholder:hover .concept-placeholder-visual {
+  transform: scale(0.995);
+}
+
+.concept-placeholder-visual span {
+  padding: 8px 10px;
+
+  background: #f4f1eb;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.concept-placeholder-info {
+  padding: 14px 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #111111;
+}
+
+.concept-placeholder-info p {
+  font-size: 0.9rem;
+}
+
+.concept-placeholder-info span {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.concepts-placeholder-note {
+  max-width: 430px;
+  margin-top: 20px;
+
+  font-size: 0.75rem;
+  line-height: 1.6;
+  opacity: 0.5;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .concepts-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .concepts-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concepts-intro-copy {
+    max-width: 650px;
+  }
+
+  .concept-placeholder-large .concept-placeholder-visual {
+    min-height: 600px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .concepts-hero {
+    min-height: 90vh;
+    padding: 110px 24px 32px;
+  }
+
+  .concepts-number {
+    display: none;
+  }
+
+  .concepts-hero h1 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .concepts-hero-description {
+    max-width: 100%;
+  }
+
+  .concepts-intro {
+    padding: 90px 24px;
+  }
+
+  .concepts-intro-grid {
+    gap: 40px;
+  }
+
+  .concepts-intro h2 {
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .concepts-archive {
+    padding: 30px 24px 90px;
+  }
+
+  .concepts-archive-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .concept-placeholder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-placeholder-large {
+    grid-column: auto;
+  }
+
+  .concept-placeholder-visual,
+  .concept-placeholder-large .concept-placeholder-visual {
+    min-height: 480px;
+  }
+}
