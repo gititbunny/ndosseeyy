@@ -1,0 +1,64 @@
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   TEMPORARY HOME INTRO
+======================================== */
+
+.home-placeholder {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-eyebrow {
+  margin-bottom: 32px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.home-placeholder h1 {
+  max-width: 1000px;
+  font-size: clamp(4rem, 11vw, 10rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+}
+
+.home-intro {
+  max-width: 580px;
+  margin-top: 48px;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .home-placeholder {
+    padding: 24px;
+  }
+
+  .home-placeholder h1 {
+    font-size: clamp(4rem, 19vw, 6.5rem);
+  }
+
+  .home-intro {
+    margin-top: 36px;
+  }
+}
