@@ -4,44 +4,827 @@
 
 .home-page {
   width: 100%;
-  min-height: 100vh;
 }
 
 
 /* ========================================
-   TEMPORARY HOME INTRO
+   SHARED HOME ELEMENTS
 ======================================== */
 
-.home-placeholder {
-  min-height: 100vh;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.home-eyebrow {
-  margin-bottom: 32px;
-  font-size: 0.75rem;
+.home-section-label {
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
-.home-placeholder h1 {
-  max-width: 1000px;
-  font-size: clamp(4rem, 11vw, 10rem);
+.home-section-heading {
+  margin-bottom: 65px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.home-section-heading h2 {
+  margin-top: 40px;
+
+  font-size: clamp(3.5rem, 7vw, 7rem);
   font-weight: 500;
-  line-height: 0.82;
+  line-height: 0.9;
   letter-spacing: -0.06em;
 }
 
-.home-intro {
-  max-width: 580px;
-  margin-top: 48px;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+.home-section-heading > a {
+  flex-shrink: 0;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   CINEMATIC HERO
+======================================== */
+
+.home-hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.home-hero-media,
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.home-hero-placeholder {
+  width: 100%;
+  height: 100%;
+
+  padding: 110px 40px 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      transparent 50%
+    ),
+    #2b2a27;
+}
+
+.home-hero-placeholder span,
+.home-hero-placeholder p {
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+.home-hero-overlay {
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.05) 65%
+    );
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 100svh;
+  padding: 120px 40px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-hero-top p,
+.home-hero-top span {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-hero-top span {
+  opacity: 0.6;
+}
+
+.home-hero-bottom {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: end;
+  gap: 70px;
+}
+
+.home-hero h1 {
+  font-size: clamp(5rem, 12vw, 12rem);
+  font-weight: 500;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+}
+
+.home-hero-intro {
+  max-width: 430px;
+}
+
+.home-hero-intro p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.home-hero-intro a {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.72rem;
+}
+
+
+/* ========================================
+   WHAT NDOSSEEYY DOES
+======================================== */
+
+.home-definition {
+  padding: 130px 40px;
+}
+
+.home-definition-grid {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 80px;
+}
+
+.home-definition h2 {
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 500;
+  line-height: 0.91;
+  letter-spacing: -0.06em;
+}
+
+.home-definition-copy {
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.home-definition-copy p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.home-definition-copy strong {
+  margin-top: 15px;
+
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+
+/* ========================================
+   IMAGINE IF
+======================================== */
+
+.home-imagine {
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: stretch;
+  gap: 18px;
+
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.home-imagine-media {
+  min-height: 760px;
+}
+
+.home-imagine-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 760px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #353431;
+}
+
+.home-imagine-placeholder > span {
+  font-size: 0.65rem;
+  letter-spacing: 0.13em;
+}
+
+.home-imagine-placeholder > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.home-imagine-copy {
+  padding: 55px 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.home-imagine-copy h2 {
+  margin-top: 35px;
+
+  font-size: clamp(3rem, 5.5vw, 5.8rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.home-imagine-copy > p:not(.home-section-label) {
+  max-width: 480px;
+  margin-top: 35px;
+
+  font-size: 0.95rem;
+  line-height: 1.75;
+
+  opacity: 0.75;
+}
+
+.home-imagine-copy a {
+  align-self: flex-start;
+
+  margin-top: 40px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   FEATURED CONCEPTS
+======================================== */
+
+.home-concepts {
+  padding: 130px 40px;
+}
+
+.home-concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+/* ========================================
+   SERVICES
+======================================== */
+
+.home-services {
+  padding: 120px 40px;
+
+  background: #d8d4cc;
+}
+
+.home-services-heading {
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.home-services-heading > p:last-child {
+  max-width: 350px;
+
+  font-size: 0.8rem;
   line-height: 1.6;
+}
+
+.home-service-row {
+  min-height: 150px;
+  padding: 25px 0;
+
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  align-items: center;
+  gap: 30px;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.3);
+
+  transition: padding 0.35s ease;
+}
+
+.home-service-row:last-child {
+  border-bottom: 1px solid rgba(17, 17, 17, 0.3);
+}
+
+.home-service-row:hover {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.home-service-row > span:first-child {
+  font-size: 0.65rem;
+
+  opacity: 0.45;
+}
+
+.home-service-row h3 {
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.home-service-row p {
+  margin-top: 10px;
+
+  font-size: 0.8rem;
+
+  opacity: 0.6;
+}
+
+.home-service-arrow {
+  justify-self: end;
+
+  font-size: 1.2rem;
+}
+
+.home-services-bottom {
+  margin-top: 45px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home-services-bottom a {
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   SELECTED WORK
+======================================== */
+
+.home-work {
+  padding: 130px 40px;
+}
+
+.home-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.home-work-piece-large {
+  grid-column: 1 / -1;
+}
+
+.home-work-placeholder {
+  min-height: 520px;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #d8d4cc;
+
+  transition: transform 0.5s ease;
+}
+
+.home-work-piece-large .home-work-placeholder {
+  min-height: 720px;
+}
+
+.home-work-piece:hover .home-work-placeholder {
+  transform: scale(0.995);
+}
+
+.home-work-placeholder span,
+.home-work-placeholder p {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-work-placeholder p {
+  align-self: flex-end;
+
+  opacity: 0.45;
+}
+
+
+/* ========================================
+   MEDIA LIBRARY PREVIEW
+======================================== */
+
+.home-media {
+  padding: 120px 40px;
+
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 80px;
+
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.home-media-copy {
+  align-self: center;
+}
+
+.home-media-copy h2 {
+  margin-top: 40px;
+
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.home-media-copy > p:not(.home-section-label) {
+  max-width: 470px;
+  margin-top: 35px;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  opacity: 0.7;
+}
+
+.home-media-copy a {
+  display: inline-block;
+
+  margin-top: 40px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+.home-media-wall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 320px 220px 320px;
+  gap: 12px;
+}
+
+.home-media-tile {
+  position: relative;
+
+  padding: 16px;
+
+  background: #343330;
+
+  overflow: hidden;
+}
+
+.home-media-tile span {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-media-tile-a {
+  grid-row: span 2;
+}
+
+.home-media-tile-b {
+  grid-row: span 1;
+}
+
+.home-media-tile-c {
+  grid-row: span 2;
+}
+
+.home-media-tile-d {
+  grid-row: span 1;
+}
+
+.home-media-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(244, 241, 235, 0.6);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   ABOUT PREVIEW
+======================================== */
+
+.home-about {
+  padding: 120px 40px;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.home-about-media {
+  width: 100%;
+  max-width: 620px;
+}
+
+.home-about-image-placeholder {
+  aspect-ratio: 4 / 5;
+  padding: 22px;
+
+  display: flex;
+  align-items: flex-end;
+
+  background: #d8d4cc;
+}
+
+.home-about-image-placeholder span {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-about-copy h2 {
+  margin-top: 40px;
+
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+}
+
+.home-about-copy > p:not(.home-section-label) {
+  max-width: 550px;
+  margin-top: 35px;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.home-about-copy a {
+  display: inline-block;
+
+  margin-top: 40px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   WATCH NDOSSEEYY
+======================================== */
+
+.home-watch {
+  padding: 130px 40px;
+
+  border-top: 1px solid rgba(17, 17, 17, 0.16);
+}
+
+.home-watch-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 18px;
+}
+
+.home-video-placeholder {
+  position: relative;
+
+  min-height: 560px;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #111111;
+  color: #f4f1eb;
+}
+
+.home-video-card-featured .home-video-placeholder {
+  min-height: 680px;
+}
+
+.home-video-placeholder > span,
+.home-video-placeholder > p {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(244, 241, 235, 0.6);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   PHILOSOPHY
+======================================== */
+
+.home-philosophy {
+  padding: 130px 40px;
+
+  background: #d8d4cc;
+}
+
+.home-philosophy h2 {
+  max-width: 1200px;
+  margin-top: 55px;
+
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+}
+
+.home-philosophy-bottom {
+  margin-top: 80px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.home-philosophy-bottom p {
+  max-width: 500px;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.home-philosophy-bottom a {
+  flex-shrink: 0;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid currentColor;
+
+  font-size: 0.75rem;
+}
+
+
+/* ========================================
+   FINAL CTA
+======================================== */
+
+.home-ending {
+  padding: 120px 40px;
+}
+
+.home-ending-content {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.home-ending h2 {
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.065em;
+}
+
+.home-ending a {
+  flex-shrink: 0;
+
+  padding: 16px 20px;
+
+  border: 1px solid #111111;
+
+  font-size: 0.76rem;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.home-ending a:hover {
+  background: #111111;
+  color: #f4f1eb;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .home-hero-bottom,
+  .home-definition-grid,
+  .home-imagine,
+  .home-media,
+  .home-about {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-intro,
+  .home-definition-copy,
+  .home-media-copy {
+    max-width: 650px;
+  }
+
+  .home-imagine-copy {
+    padding: 50px 10px 30px;
+  }
+
+  .home-media-wall {
+    max-width: 850px;
+  }
+
+  .home-about-media {
+    max-width: 500px;
+  }
+
+  .home-watch-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -50,15 +833,188 @@
 ======================================== */
 
 @media (max-width: 768px) {
-  .home-placeholder {
+  .home-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .home-section-heading h2 {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+  }
+
+  .home-hero-content {
+    padding: 105px 24px 30px;
+  }
+
+  .home-hero-placeholder {
+    padding: 100px 24px 24px;
+  }
+
+  .home-hero-placeholder p {
+    display: none;
+  }
+
+  .home-hero-top span {
+    display: none;
+  }
+
+  .home-hero-bottom {
+    gap: 40px;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(5rem, 23vw, 7.5rem);
+  }
+
+  .home-definition {
+    padding: 90px 24px;
+  }
+
+  .home-definition-grid {
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .home-definition h2 {
+    font-size: clamp(3.3rem, 14vw, 5.2rem);
+  }
+
+  .home-imagine {
     padding: 24px;
+
+    gap: 0;
   }
 
-  .home-placeholder h1 {
-    font-size: clamp(4rem, 19vw, 6.5rem);
+  .home-imagine-media,
+  .home-imagine-placeholder {
+    min-height: 580px;
   }
 
-  .home-intro {
-    margin-top: 36px;
+  .home-imagine-placeholder > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-imagine-copy {
+    padding: 65px 0 40px;
+  }
+
+  .home-imagine-copy h2 {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+  }
+
+  .home-concepts {
+    padding: 90px 24px;
+  }
+
+  .home-concepts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-services {
+    padding: 90px 24px;
+  }
+
+  .home-services-heading {
+    flex-direction: column;
+  }
+
+  .home-service-row {
+    min-height: 130px;
+
+    grid-template-columns: 45px 1fr 25px;
+    gap: 12px;
+  }
+
+  .home-service-row h3 {
+    font-size: clamp(1.8rem, 9vw, 3.1rem);
+  }
+
+  .home-service-row p {
+    line-height: 1.5;
+  }
+
+  .home-work {
+    padding: 90px 24px;
+  }
+
+  .home-work-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .home-work-piece-large {
+    grid-column: auto;
+  }
+
+  .home-work-placeholder,
+  .home-work-piece-large .home-work-placeholder {
+    min-height: 520px;
+  }
+
+  .home-media {
+    padding: 90px 24px;
+
+    gap: 60px;
+  }
+
+  .home-media-copy h2 {
+    font-size: clamp(3.3rem, 14vw, 5rem);
+  }
+
+  .home-media-wall {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 180px 260px;
+  }
+
+  .home-about {
+    padding: 90px 24px;
+
+    gap: 60px;
+  }
+
+  .home-about-media {
+    max-width: 100%;
+  }
+
+  .home-about-copy h2 {
+    font-size: clamp(3.8rem, 16vw, 5.8rem);
+  }
+
+  .home-watch {
+    padding: 90px 24px;
+  }
+
+  .home-video-placeholder,
+  .home-video-card-featured .home-video-placeholder {
+    min-height: 560px;
+  }
+
+  .home-philosophy {
+    padding: 90px 24px;
+  }
+
+  .home-philosophy h2 {
+    font-size: clamp(3.8rem, 16vw, 6rem);
+  }
+
+  .home-philosophy-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .home-ending {
+    padding: 90px 24px;
+  }
+
+  .home-ending-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home-ending h2 {
+    font-size: clamp(4rem, 17vw, 6.2rem);
   }
 }
