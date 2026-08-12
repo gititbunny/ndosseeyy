@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import ConceptCard from "../components/ConceptCard";
 import conceptsData from "../data/conceptsData";
+import homeHeroFilm from "../assets/videos/home/home-hero-film.mp4";
 import "../styles/Home.css";
 
 function Home() {
