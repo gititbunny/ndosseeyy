@@ -37,46 +37,49 @@ function Home() {
   return (
     <main className="home-page">
       {/* ========================================
-          CINEMATIC HERO
-      ======================================== */}
-      <section className="home-hero">
-        <div className="home-hero-media">
-          <div className="home-hero-placeholder">
-            <span>NDOSSEEYY / HERO FILM</span>
-
-            <p>
-              Branding · Packaging · Typography · Concepts · Design · Motion
-            </p>
-          </div>
-        </div>
-
-        <div className="home-hero-overlay" />
-
-        <div className="home-hero-content">
-          <div className="home-hero-top">
-            <p>Creative Business &amp; Brand Studio</p>
-            <span>Johannesburg · South Africa</span>
-          </div>
-
-          <div className="home-hero-bottom">
-            <h1>
-              Imagine
-              <br />
-              it differently.
-            </h1>
-
-            <div className="home-hero-intro">
-              <p>
-                NDOSSEEYY creates business concepts, brands, visual worlds and
-                creative direction for ideas that deserve to feel considered.
-              </p>
-
-              <Link to="/work">Explore the Work ↘</Link>
+              CINEMATIC HERO
+          ======================================== */}
+          <section className="home-hero">
+            <div className="home-hero-media">
+              <video
+                className="home-hero-video"
+                src={homeHeroFilm}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-hidden="true"
+              />
             </div>
-          </div>
-        </div>
-      </section>
 
+            <div className="home-hero-overlay" />
+
+            <div className="home-hero-content">
+              <div className="home-hero-top">
+                <p>Creative Business &amp; Brand Studio</p>
+                <span>Johannesburg · South Africa</span>
+              </div>
+
+              <div className="home-hero-bottom">
+                <h1>
+                  Imagine
+                  <br />
+                  it differently.
+                </h1>
+
+                <div className="home-hero-intro">
+                  <p>
+                    NDOSSEEYY creates business concepts, brands, visual worlds and
+                    creative direction for ideas that deserve to feel considered.
+                  </p>
+
+                  <Link to="/work">Explore the Work ↘</Link>
+                </div>
+              </div>
+            </div>
+          </section>
+          
       {/* ========================================
           WHAT NDOSSEEYY DOES
       ======================================== */}
