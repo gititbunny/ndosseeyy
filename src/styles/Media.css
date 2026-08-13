@@ -160,11 +160,6 @@
   position: relative;
 
   min-height: 500px;
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   overflow: hidden;
 
@@ -187,10 +182,50 @@
   min-height: 650px;
 }
 
-.media-item-top {
-  position: relative;
+.media-item-image,
+.media-item-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.media-item:hover .media-item-image,
+.media-item:hover .media-item-video {
+  transform: scale(1.025);
+}
+
+
+/* ========================================
+   MEDIA OVERLAY
+======================================== */
+
+.media-item-overlay {
+  position: absolute;
+  inset: 0;
+
   z-index: 2;
 
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.16),
+      rgba(0, 0, 0, 0.05) 50%,
+      rgba(0, 0, 0, 0.35)
+    );
+
+  color: #ffffff;
+}
+
+.media-item-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,20 +240,50 @@
 .media-type {
   padding: 7px 9px;
 
+  background: rgba(244, 241, 235, 0.92);
+  color: #111111;
+}
+
+
+/* ========================================
+   VIDEO INDICATOR
+======================================== */
+
+.media-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 92px;
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.media-play span {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media-item:hover .media-play {
   background: #f4f1eb;
+  color: #111111;
+
+  transform: translate(-50%, -50%) scale(1.06);
 }
-
-.media-placeholder-text {
-  position: relative;
-  z-index: 2;
-
-  align-self: flex-end;
-
-  font-size: 0.68rem;
-
-  opacity: 0.45;
-}
-
 
 /* ========================================
    VIDEO INDICATOR
