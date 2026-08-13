@@ -140,6 +140,163 @@
   line-height: 1.75;
 }
 
+/* ========================================
+   CONCEPT VISUAL WORLD
+======================================== */
+
+.concept-visual-world {
+  padding: 20px 40px 140px;
+}
+
+.concept-visual-heading {
+  padding-bottom: 25px;
+  margin-bottom: 18px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+
+  border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+}
+
+.concept-visual-heading > p:last-child {
+  max-width: 330px;
+
+  font-size: 0.75rem;
+  line-height: 1.6;
+
+  opacity: 0.6;
+}
+
+
+/* ========================================
+   LARGE CONCEPT VISUAL
+======================================== */
+
+.concept-visual-large,
+.concept-visual-wide,
+.concept-visual-film {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #d8d4cc;
+}
+
+.concept-visual-large {
+  min-height: 720px;
+}
+
+.concept-visual-wide {
+  min-height: 620px;
+  margin-top: 18px;
+}
+
+.concept-visual-large img,
+.concept-visual-wide img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.concept-visual-large > span,
+.concept-visual-wide > span {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  z-index: 2;
+
+  padding: 8px 10px;
+
+  background: rgba(244, 241, 235, 0.92);
+
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   CONCEPT VISUAL PAIRS
+======================================== */
+
+.concept-visual-pair {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.concept-visual-pair figure {
+  margin: 0;
+}
+
+.concept-visual-pair img {
+  width: 100%;
+  height: 650px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.concept-visual-pair figcaption {
+  padding: 12px 0 25px;
+
+  border-top: 1px solid #111111;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   CONCEPT FILM
+======================================== */
+
+.concept-visual-film {
+  height: 78vh;
+  min-height: 620px;
+  margin-top: 18px;
+
+  background: #111111;
+}
+
+.concept-visual-film video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.concept-film-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.concept-film-label span {
+  padding: 8px 10px;
+
+  background: rgba(244, 241, 235, 0.92);
+  color: #111111;
+
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* ========================================
    PUBLIC CONCEPT PREVIEW
@@ -473,5 +630,31 @@
 
   .concept-not-found {
     padding: 100px 24px;
+  }
+
+    .concept-visual-world {
+    padding: 10px 24px 100px;
+  }
+
+  .concept-visual-heading {
+    flex-direction: column;
+  }
+
+  .concept-visual-large,
+  .concept-visual-wide {
+    min-height: 520px;
+  }
+
+  .concept-visual-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .concept-visual-pair img {
+    height: 520px;
+  }
+
+  .concept-visual-film {
+    height: 65vh;
+    min-height: 520px;
   }
 }
