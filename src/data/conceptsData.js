@@ -1,3 +1,13 @@
+import concept001Cover from "../assets/images/concepts/concept-001-cover.jpg";
+import concept001Hero from "../assets/images/concepts/concept-001-hero.jpg";
+import concept001Logo from "../assets/images/concepts/concept-001-logo.jpg";
+import concept001Branding from "../assets/images/concepts/concept-001-branding-01.jpg";
+import concept001Packaging from "../assets/images/concepts/concept-001-packaging-01.jpg";
+import concept001Product from "../assets/images/concepts/concept-001-product-01.jpg";
+import concept001Photography from "../assets/images/concepts/concept-001-photography-01.jpg";
+import concept001Digital from "../assets/images/concepts/concept-001-digital-01.jpg";
+import concept001Film from "../assets/videos/concepts/concept-001-film.mp4";
+
 const conceptsData = [
   {
     id: 1,
@@ -6,14 +16,17 @@ const conceptsData = [
     title: "Concept 001",
     category: "Business Concept",
     status: "Available",
-    image: null,
+
+    image: concept001Cover,
+    heroImage: concept001Hero,
+
     featured: true,
 
     shortDescription:
       "A complete ready-made business concept imagined and developed by NDOSSEEYY.",
 
     conceptIdea:
-      "This area will introduce the business idea without revealing the complete strategy. It gives enough context for someone to understand the opportunity and become interested in acquiring it.",
+      "This concept has been developed as a complete business world — considering not only how the brand looks, but how the idea could be positioned, presented, experienced and eventually brought to life.",
 
     previewHighlights: [
       "Business direction",
@@ -25,6 +38,16 @@ const conceptsData = [
     ],
 
     startingPrice: "R15,000+",
+
+    media: {
+      logo: concept001Logo,
+      branding: concept001Branding,
+      packaging: concept001Packaging,
+      product: concept001Product,
+      photography: concept001Photography,
+      digital: concept001Digital,
+      film: concept001Film,
+    },
   },
 
   {
@@ -35,6 +58,7 @@ const conceptsData = [
     category: "Brand Concept",
     status: "Available",
     image: null,
+    heroImage: null,
     featured: false,
 
     shortDescription:
@@ -53,6 +77,7 @@ const conceptsData = [
     ],
 
     startingPrice: "R15,000+",
+    media: null,
   },
 
   {
@@ -63,6 +88,7 @@ const conceptsData = [
     category: "Creative Concept",
     status: "Acquired",
     image: null,
+    heroImage: null,
     featured: false,
 
     shortDescription:
@@ -79,6 +105,7 @@ const conceptsData = [
     ],
 
     startingPrice: null,
+    media: null,
   },
 ];
 
