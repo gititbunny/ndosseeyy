@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import ConceptCard from "../components/ConceptCard";
 import conceptsData from "../data/conceptsData";
 import homeHeroFilm from "../assets/videos/home/home-hero-film.mp4";
+import homeImagineFeature from "../assets/images/home/home-imagine-feature.jpg";
 import "../styles/Home.css";
 
 function Home() {
