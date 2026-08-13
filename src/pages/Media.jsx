@@ -1,3 +1,12 @@
+import media001 from "../assets/images/media/media-001.jpg";
+import media002 from "../assets/images/media/media-002.jpg";
+import media003 from "../assets/videos/media/media-003.mp4";
+import media004 from "../assets/images/media/media-004.jpg";
+import media005 from "../assets/images/media/media-005.jpg";
+import media006 from "../assets/videos/media/media-006.mp4";
+import media007 from "../assets/images/media/media-007.jpg";
+import media008 from "../assets/images/media/media-008.jpg";
+
 import "../styles/Media.css";
 
 function Media() {
@@ -7,7 +16,8 @@ function Media() {
       number: "MD / 001",
       title: "Creative Study",
       category: "Graphic Design",
-      type: "Image",
+      type: "image",
+      src: media001,
       layout: "large",
     },
     {
@@ -15,7 +25,8 @@ function Media() {
       number: "MD / 002",
       title: "Photography Direction",
       category: "Creative Direction",
-      type: "Image",
+      type: "image",
+      src: media002,
       layout: "portrait",
     },
     {
@@ -23,7 +34,8 @@ function Media() {
       number: "MD / 003",
       title: "Motion Experiment",
       category: "Motion",
-      type: "Video",
+      type: "video",
+      src: media003,
       layout: "standard",
     },
     {
@@ -31,7 +43,8 @@ function Media() {
       number: "MD / 004",
       title: "Packaging Study",
       category: "Packaging",
-      type: "Image",
+      type: "image",
+      src: media004,
       layout: "standard",
     },
     {
@@ -39,7 +52,8 @@ function Media() {
       number: "MD / 005",
       title: "Visual Experiment",
       category: "Experiment",
-      type: "Image",
+      type: "image",
+      src: media005,
       layout: "landscape",
     },
     {
@@ -47,7 +61,8 @@ function Media() {
       number: "MD / 006",
       title: "Digital Concept",
       category: "Digital",
-      type: "Video",
+      type: "video",
+      src: media006,
       layout: "portrait",
     },
     {
@@ -55,7 +70,8 @@ function Media() {
       number: "MD / 007",
       title: "Campaign Visual",
       category: "Graphic Design",
-      type: "Image",
+      type: "image",
+      src: media007,
       layout: "standard",
     },
     {
@@ -63,7 +79,8 @@ function Media() {
       number: "MD / 008",
       title: "Brand World Study",
       category: "Branding",
-      type: "Image",
+      type: "image",
+      src: media008,
       layout: "wide",
     },
   ];
@@ -100,7 +117,6 @@ function Media() {
           <button type="button" className="media-filter-active">
             All
           </button>
-
           <button type="button">Branding</button>
           <button type="button">Graphic</button>
           <button type="button">Photography</button>
@@ -121,21 +137,39 @@ function Media() {
             key={item.id}
           >
             <div className="media-item-visual">
-              <div className="media-item-top">
-                <span>{item.number}</span>
-
-                <span className="media-type">{item.type}</span>
-              </div>
-
-              {item.type === "Video" && (
-                <div className="media-play">
-                  <span>Play</span>
-                </div>
+              {item.type === "image" ? (
+                <img
+                  src={item.src}
+                  alt={`${item.title} by NDOSSEEYY`}
+                  className="media-item-image"
+                />
+              ) : (
+                <video
+                  src={item.src}
+                  className="media-item-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
               )}
 
-              <p className="media-placeholder-text">
-                {item.type} media will live here.
-              </p>
+              <div className="media-item-overlay">
+                <div className="media-item-top">
+                  <span>{item.number}</span>
+
+                  <span className="media-type">
+                    {item.type === "video" ? "Motion" : "Image"}
+                  </span>
+                </div>
+
+                {item.type === "video" && (
+                  <div className="media-play">
+                    <span>Motion</span>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="media-item-info">
@@ -173,12 +207,12 @@ function Media() {
                 <span>Play</span>
               </div>
 
-              <p>Featured long-form content</p>
+              <p>Build This Business</p>
             </div>
 
             <div className="social-video-info">
-              <p>Build This Business</p>
-              <span>Video coming soon</span>
+              <p>Long-form concept breakdowns</p>
+              <span>Coming soon</span>
             </div>
           </article>
 
@@ -190,12 +224,12 @@ function Media() {
                 <span>Play</span>
               </div>
 
-              <p>Selected social content</p>
+              <p>Imagine If...</p>
             </div>
 
             <div className="social-video-info">
-              <p>Imagine If...</p>
-              <span>Video coming soon</span>
+              <p>Short-form creative content</p>
+              <span>Coming soon</span>
             </div>
           </article>
         </div>
