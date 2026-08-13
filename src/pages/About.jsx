@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import aninEditorial from "../assets/images/about/about-anin-editorial.png";
+import aboutCreativeFilm from "../assets/videos/about/about-creative-film.mp4";
 import "../styles/About.css";
 
 function About() {
