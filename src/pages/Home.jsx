@@ -3,6 +3,9 @@ import ConceptCard from "../components/ConceptCard";
 import conceptsData from "../data/conceptsData";
 import homeHeroFilm from "../assets/videos/home/home-hero-film.mp4";
 import homeImagineFeature from "../assets/images/home/home-imagine-feature.jpg";
+import homeWork01 from "../assets/images/home/home-work-01.jpg";
+import homeWork02 from "../assets/images/home/home-work-02.jpg";
+import homeWork03 from "../assets/images/home/home-work-03.jpg";
 import "../styles/Home.css";
 
 function Home() {
