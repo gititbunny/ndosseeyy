@@ -10,6 +10,7 @@ import homeMedia01 from "../assets/images/home/home-media-01.jpg";
 import homeMedia02 from "../assets/videos/home/home-media-02.mp4";
 import homeMedia03 from "../assets/images/home/home-media-03.jpg";
 import homeMedia04 from "../assets/images/home/home-media-04.jpg";
+import aninEditorial from "../assets/images/about/about-anin-editorial.png";
 import "../styles/Home.css";
 
 function Home() {
