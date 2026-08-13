@@ -146,12 +146,6 @@
   position: relative;
 
   min-height: 520px;
-  padding: 22px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
 
   overflow: hidden;
 
@@ -170,42 +164,61 @@
   min-height: 620px;
 }
 
-.work-card-media::after {
-  content: "";
-
+.work-card-media img {
   position: absolute;
   inset: 0;
 
-  border: 1px solid transparent;
+  width: 100%;
+  height: 100%;
 
-  transition:
-    border-color 0.3s ease,
-    transform 0.5s ease;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.work-card:hover .work-card-media::after {
-  border-color: rgba(17, 17, 17, 0.18);
-
-  transform: scale(0.985);
+.work-card:hover .work-card-media img {
+  transform: scale(1.025);
 }
 
-.work-card-media span,
-.work-card-media p {
-  position: relative;
-  z-index: 1;
+
+/* ========================================
+   WORK MEDIA OVERLAY
+======================================== */
+
+.work-card-media-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.4)
+    );
+
+  color: #ffffff;
 }
 
-.work-card-media span {
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+.work-card-media-overlay span,
+.work-card-media-overlay p {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.work-card-media p {
-  font-size: 0.7rem;
-
-  opacity: 0.45;
+.work-card-media-overlay p {
+  align-self: flex-start;
 }
-
 
 /* ========================================
    WORK INFORMATION
