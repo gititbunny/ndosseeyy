@@ -45,10 +45,12 @@ function ConceptDetail() {
       </section>
 
       {/* ========================================
-          MAIN CONCEPT VISUAL
+          CONCEPT HERO IMAGE
       ======================================== */}
       <section className="concept-detail-featured-media">
-        {concept.image ? (
+        {concept.heroImage ? (
+          <img src={concept.heroImage} alt={`${concept.title} visual direction`} />
+        ) : concept.image ? (
           <img src={concept.image} alt={concept.title} />
         ) : (
           <div className="concept-detail-media-placeholder">
@@ -76,6 +78,101 @@ function ConceptDetail() {
       </section>
 
       {/* ========================================
+          CONCEPT VISUAL WORLD
+      ======================================== */}
+      {concept.media && (
+        <section className="concept-visual-world">
+          <div className="concept-visual-heading">
+            <p className="concept-detail-section-label">
+              Inside the Visual World
+            </p>
+
+            <p>
+              Selected pieces from the public-facing creative direction.
+            </p>
+          </div>
+
+          {/* Logo */}
+          <div className="concept-visual-large">
+            <img
+              src={concept.media.logo}
+              alt={`${concept.title} logo direction`}
+            />
+
+            <span>Identity / Logo</span>
+          </div>
+
+          {/* Branding + Packaging */}
+          <div className="concept-visual-pair">
+            <figure>
+              <img
+                src={concept.media.branding}
+                alt={`${concept.title} branding`}
+              />
+
+              <figcaption>Brand World</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src={concept.media.packaging}
+                alt={`${concept.title} packaging direction`}
+              />
+
+              <figcaption>Packaging</figcaption>
+            </figure>
+          </div>
+
+          {/* Film */}
+          <div className="concept-visual-film">
+            <video
+              src={concept.media.film}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+
+            <div className="concept-film-label">
+              <span>Concept Film</span>
+            </div>
+          </div>
+
+          {/* Product */}
+          <div className="concept-visual-wide">
+            <img
+              src={concept.media.product}
+              alt={`${concept.title} product direction`}
+            />
+
+            <span>Product Direction</span>
+          </div>
+
+          {/* Photography + Digital */}
+          <div className="concept-visual-pair concept-visual-pair-final">
+            <figure>
+              <img
+                src={concept.media.photography}
+                alt={`${concept.title} photography direction`}
+              />
+
+              <figcaption>Photography Direction</figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src={concept.media.digital}
+                alt={`${concept.title} digital direction`}
+              />
+
+              <figcaption>Digital Direction</figcaption>
+            </figure>
+          </div>
+        </section>
+      )}
+
+      {/* ========================================
           PUBLIC PREVIEW
       ======================================== */}
       <section className="concept-preview">
@@ -90,9 +187,7 @@ function ConceptDetail() {
         <div className="concept-preview-grid">
           {concept.previewHighlights.map((highlight, index) => (
             <article className="concept-preview-item" key={highlight}>
-              <span>
-                {String(index + 1).padStart(2, "0")}
-              </span>
+              <span>{String(index + 1).padStart(2, "0")}</span>
 
               <p>{highlight}</p>
             </article>
@@ -161,7 +256,7 @@ function ConceptDetail() {
               <h2>This concept has been acquired.</h2>
 
               <p>
-                It remains in the NDOSSEEYY archive as part of the studio's
+                It remains in the NDOSSEEYY archive as part of the studio&apos;s
                 creative history. Its private strategic material is no longer
                 available for acquisition.
               </p>
