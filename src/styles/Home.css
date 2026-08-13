@@ -1012,8 +1012,8 @@
     grid-column: auto;
   }
 
-  .home-work-placeholder,
-  .home-work-piece-large .home-work-placeholder {
+  .home-work-media,
+  .home-work-piece-large .home-work-media {
     min-height: 520px;
   }
 
