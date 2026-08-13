@@ -6,6 +6,10 @@ import homeImagineFeature from "../assets/images/home/home-imagine-feature.jpg";
 import homeWork01 from "../assets/images/home/home-work-01.jpg";
 import homeWork02 from "../assets/images/home/home-work-02.jpg";
 import homeWork03 from "../assets/images/home/home-work-03.jpg";
+import homeMedia01 from "../assets/images/home/home-media-01.jpg";
+import homeMedia02 from "../assets/videos/home/home-media-02.mp4";
+import homeMedia03 from "../assets/images/home/home-media-03.jpg";
+import homeMedia04 from "../assets/images/home/home-media-04.jpg";
 import "../styles/Home.css";
 
 function Home() {
