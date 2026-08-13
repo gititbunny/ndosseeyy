@@ -913,9 +913,8 @@
     gap: 0;
   }
 
-  .home-imagine-media,
-  .home-imagine-placeholder {
-    min-height: 580px;
+  .home-imagine-media {
+  min-height: 580px;
   }
 
   .home-imagine-placeholder > div {
