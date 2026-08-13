@@ -290,46 +290,77 @@ function Home() {
           </section>
 
       {/* ========================================
-          MEDIA / CREATIVE ARCHIVE
-      ======================================== */}
-      <section className="home-media">
-        <div className="home-media-copy">
-          <p className="home-section-label">The Media Library</p>
+              MEDIA / CREATIVE ARCHIVE
+          ======================================== */}
+          <section className="home-media">
+            <div className="home-media-copy">
+              <p className="home-section-label">The Media Library</p>
 
-          <h2>
-            Not everything
-            needs to become
-            a project.
-          </h2>
+              <h2>
+                Not everything
+                needs to become
+                a project.
+              </h2>
 
-          <p>
-            Some things exist because I wanted to design them, photograph them,
-            animate them, edit them or see what would happen if the idea became
-            visual.
-          </p>
+              <p>
+                Some things exist because I wanted to design them, photograph them,
+                animate them, edit them or simply see what would happen if the idea
+                became visual.
+              </p>
 
-          <Link to="/media">Enter the Media Library →</Link>
-        </div>
+              <Link to="/media">Enter the Media Library →</Link>
+            </div>
 
-        <div className="home-media-wall">
-          <div className="home-media-tile home-media-tile-a">
-            <span>Image</span>
-          </div>
+            <div className="home-media-wall">
+              {/* Image 01 */}
+              <Link to="/media" className="home-media-tile home-media-tile-a">
+                <img
+                  src={homeMedia01}
+                  alt="NDOSSEEYY creative visual experiment"
+                />
 
-          <div className="home-media-tile home-media-tile-b">
-            <span>Motion</span>
-            <div className="home-media-play">Play</div>
-          </div>
+                <span className="home-media-label">Image</span>
+              </Link>
 
-          <div className="home-media-tile home-media-tile-c">
-            <span>Experiment</span>
-          </div>
+              {/* Video */}
+              <Link to="/media" className="home-media-tile home-media-tile-b">
+                <video
+                  src={homeMedia02}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
 
-          <div className="home-media-tile home-media-tile-d">
-            <span>Photography</span>
-          </div>
-        </div>
-      </section>
+                <span className="home-media-label">Motion</span>
+
+                <div className="home-media-video-indicator">
+                  Motion
+                </div>
+              </Link>
+
+              {/* Image 03 */}
+              <Link to="/media" className="home-media-tile home-media-tile-c">
+                <img
+                  src={homeMedia03}
+                  alt="NDOSSEEYY design experiment"
+                />
+
+                <span className="home-media-label">Experiment</span>
+              </Link>
+
+              {/* Image 04 */}
+              <Link to="/media" className="home-media-tile home-media-tile-d">
+                <img
+                  src={homeMedia04}
+                  alt="NDOSSEEYY photography and creative direction"
+                />
+
+                <span className="home-media-label">Photography</span>
+              </Link>
+            </div>
+          </section>
 
       {/* ========================================
           ABOUT NDOSSEEYY
