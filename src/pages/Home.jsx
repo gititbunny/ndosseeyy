@@ -220,46 +220,70 @@ function Home() {
       </section>
 
       {/* ========================================
-          VISUAL WORK
-      ======================================== */}
-      <section className="home-work">
-        <div className="home-section-heading">
-          <div>
-            <p className="home-section-label">Selected Work</p>
+              SELECTED WORK
+          ======================================== */}
+          <section className="home-work">
+            <div className="home-section-heading">
+              <div>
+                <p className="home-section-label">Selected Work</p>
 
-            <h2>
-              Ideas made
-              <br />
-              visible.
-            </h2>
-          </div>
+                <h2>
+                  Ideas made
+                  <br />
+                  visible.
+                </h2>
+              </div>
 
-          <Link to="/work">View Work →</Link>
-        </div>
-
-        <div className="home-work-grid">
-          <Link to="/work" className="home-work-piece home-work-piece-large">
-            <div className="home-work-placeholder">
-              <span>Brand / Creative Direction</span>
-              <p>Featured project media</p>
+              <Link to="/work">View Work →</Link>
             </div>
-          </Link>
 
-          <Link to="/work" className="home-work-piece">
-            <div className="home-work-placeholder">
-              <span>Graphic / Digital</span>
-              <p>Selected visual work</p>
-            </div>
-          </Link>
+            <div className="home-work-grid">
+              <Link
+                to="/work"
+                className="home-work-piece home-work-piece-large"
+              >
+                <div className="home-work-media">
+                  <img
+                    src={homeWork01}
+                    alt="Selected NDOSSEEYY branding and creative direction project"
+                  />
 
-          <Link to="/work" className="home-work-piece">
-            <div className="home-work-placeholder">
-              <span>Packaging / Identity</span>
-              <p>Selected visual work</p>
+                  <div className="home-work-overlay">
+                    <span>Brand / Creative Direction</span>
+                    <p>Selected Project</p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to="/work" className="home-work-piece">
+                <div className="home-work-media">
+                  <img
+                    src={homeWork02}
+                    alt="Selected NDOSSEEYY graphic and digital design work"
+                  />
+
+                  <div className="home-work-overlay">
+                    <span>Graphic / Digital</span>
+                    <p>Selected Work</p>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to="/work" className="home-work-piece">
+                <div className="home-work-media">
+                  <img
+                    src={homeWork03}
+                    alt="Selected NDOSSEEYY packaging and identity work"
+                  />
+
+                  <div className="home-work-overlay">
+                    <span>Packaging / Identity</span>
+                    <p>Selected Work</p>
+                  </div>
+                </div>
+              </Link>
             </div>
-          </Link>
-        </div>
-      </section>
+          </section>
 
       {/* ========================================
           MEDIA / CREATIVE ARCHIVE
