@@ -1,3 +1,7 @@
+import work001 from "../assets/images/work/work-001-cover.jpg";
+import work002 from "../assets/images/work/work-002-cover.jpg";
+import work003 from "../assets/images/work/work-003-cover.jpg";
+
 import "../styles/Work.css";
 
 function Work() {
@@ -8,6 +12,7 @@ function Work() {
       title: "Selected Brand Project",
       category: "Brand Creation",
       year: "2026",
+      image: work001,
       layout: "large",
     },
     {
@@ -16,6 +21,7 @@ function Work() {
       title: "Packaging Direction",
       category: "Creative Direction",
       year: "2026",
+      image: work002,
       layout: "tall",
     },
     {
@@ -24,22 +30,7 @@ function Work() {
       title: "Visual Identity Study",
       category: "Brand Identity",
       year: "2026",
-      layout: "standard",
-    },
-    {
-      id: 4,
-      number: "WK / 004",
-      title: "Business Elevation",
-      category: "Brand Elevation",
-      year: "2026",
-      layout: "wide",
-    },
-    {
-      id: 5,
-      number: "WK / 005",
-      title: "Digital Experience",
-      category: "Web Direction",
-      year: "2026",
+      image: work003,
       layout: "standard",
     },
   ];
@@ -98,9 +89,15 @@ function Work() {
             key={item.id}
           >
             <div className="work-card-media">
-              <span>{item.number}</span>
+              <img
+                src={item.image}
+                alt={`${item.title} by NDOSSEEYY`}
+              />
 
-              <p>Visual media will live here.</p>
+              <div className="work-card-media-overlay">
+                <span>{item.number}</span>
+                <p>{item.category}</p>
+              </div>
             </div>
 
             <div className="work-card-info">
