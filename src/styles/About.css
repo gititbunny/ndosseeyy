@@ -82,38 +82,116 @@
 
 .about-media-main,
 .about-media-secondary {
-  padding: 24px;
+  position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
 
   background: #d8d4cc;
 }
+
+
+/* ========================================
+   EDITORIAL PORTRAIT
+======================================== */
 
 .about-media-main {
   min-height: 760px;
 }
 
+.about-media-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-media-main:hover .about-media-image {
+  transform: scale(1.02);
+}
+
+.about-media-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: flex-end;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 55%,
+      rgba(0, 0, 0, 0.42)
+    );
+
+  color: #ffffff;
+}
+
+.about-media-overlay span {
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   CREATIVE FILM
+======================================== */
+
 .about-media-secondary {
   min-height: 520px;
 }
 
-.about-media span {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+.about-media-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-media-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.42)
+    );
+
+  color: #ffffff;
+}
+
+.about-media-video-overlay span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.about-media p {
-  max-width: 260px;
-
+.about-media-video-overlay p {
+  max-width: 240px;
   align-self: flex-end;
-
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   line-height: 1.5;
-
-  opacity: 0.5;
+  text-align: right;
+  opacity: 0.8;
 }
 
 
