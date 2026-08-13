@@ -47,27 +47,42 @@ function About() {
       </section>
 
       {/* ========================================
-          PERSONAL MEDIA
-      ======================================== */}
-      <section className="about-media">
-        <div className="about-media-main">
-          <span>Portrait / Creative Film</span>
+              PERSONAL MEDIA
+          ======================================== */}
+          <section className="about-media">
+            {/* Editorial Portrait */}
+            <div className="about-media-main">
+              <img
+                src={aninEditorial}
+                alt="Anin Laust, creative mind behind NDOSSEEYY"
+                className="about-media-image"
+              />
 
-          <p>
-            A photograph, cinematic portrait or short NDOSSEEYY film can live
-            here.
-          </p>
-        </div>
+              <div className="about-media-overlay">
+                <span>ANIN LAUST / NDOSSEEYY</span>
+              </div>
+            </div>
 
-        <div className="about-media-secondary">
-          <span>Behind the Work</span>
+            {/* Creative Film */}
+            <div className="about-media-secondary">
+              <video
+                src={aboutCreativeFilm}
+                className="about-media-video"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="NDOSSEEYY creative process film"
+              />
 
-          <p>
-            Designing, sketching, coding, creating or building something.
-          </p>
-        </div>
-      </section>
-
+              <div className="about-media-video-overlay">
+                <span>Behind the Work</span>
+                <p>Design · Code · Editing · Ideas · Making</p>
+              </div>
+            </div>
+          </section>
+          
       {/* ========================================
           CREATIVE IDENTITY
       ======================================== */}
