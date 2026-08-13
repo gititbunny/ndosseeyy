@@ -364,32 +364,42 @@ function Home() {
           </section>
 
       {/* ========================================
-          ABOUT NDOSSEEYY
-      ======================================== */}
-      <section className="home-about">
-        <div className="home-about-media">
-          <div className="home-about-image-placeholder">
-            <span>ANIN LAUST / EDITORIAL PORTRAIT</span>
-          </div>
-        </div>
+              ABOUT NDOSSEEYY
+          ======================================== */}
+          <section className="home-about">
+            <div className="home-about-media">
+              <Link to="/about" className="home-about-image-link">
+                <img
+                  src={aninEditorial}
+                  alt="Anin Laust, creative mind behind NDOSSEEYY"
+                  className="home-about-image"
+                />
 
-        <div className="home-about-copy">
-          <p className="home-section-label">Meet the Mind Behind NDOSSEEYY</p>
+                <div className="home-about-image-overlay">
+                  <span>ANIN LAUST / NDOSSEEYY</span>
+                </div>
+              </Link>
+            </div>
 
-          <h2>
-            I was never
-            only one thing.
-          </h2>
+            <div className="home-about-copy">
+              <p className="home-section-label">
+                Meet the Mind Behind NDOSSEEYY
+              </p>
 
-          <p>
-            Design taught me to see. Technology taught me to build. NDOSSEEYY
-            is where those different parts meet — business, creativity,
-            strategy, design and possibility.
-          </p>
+              <h2>
+                I was never
+                only one thing.
+              </h2>
 
-          <Link to="/about">Meet Anin →</Link>
-        </div>
-      </section>
+              <p>
+                Design taught me to see. Technology taught me to build. NDOSSEEYY is
+                where those different parts meet — business, creativity, strategy,
+                design and possibility.
+              </p>
+
+              <Link to="/about">Meet Anin →</Link>
+            </div>
+          </section>
 
       {/* ========================================
           WATCH NDOSSEEYY
