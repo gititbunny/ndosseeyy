@@ -452,44 +452,87 @@
   gap: 18px;
 }
 
+.home-work-piece {
+  min-width: 0;
+}
+
 .home-work-piece-large {
   grid-column: 1 / -1;
 }
 
-.home-work-placeholder {
+
+/* ========================================
+   SELECTED WORK MEDIA
+======================================== */
+
+.home-work-media {
+  position: relative;
+
   min-height: 520px;
+
+  overflow: hidden;
+
+  background: #d8d4cc;
+}
+
+.home-work-piece-large .home-work-media {
+  min-height: 720px;
+}
+
+.home-work-media img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-work-piece:hover .home-work-media img {
+  transform: scale(1.025);
+}
+
+
+/* ========================================
+   SELECTED WORK OVERLAY
+======================================== */
+
+.home-work-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
   padding: 22px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background: #d8d4cc;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.45)
+    );
 
-  transition: transform 0.5s ease;
+  color: #ffffff;
 }
 
-.home-work-piece-large .home-work-placeholder {
-  min-height: 720px;
-}
-
-.home-work-piece:hover .home-work-placeholder {
-  transform: scale(0.995);
-}
-
-.home-work-placeholder span,
-.home-work-placeholder p {
+.home-work-overlay span,
+.home-work-overlay p {
   font-size: 0.65rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.home-work-placeholder p {
+.home-work-overlay p {
   align-self: flex-end;
-
-  opacity: 0.45;
 }
-
 
 /* ========================================
    MEDIA LIBRARY PREVIEW
