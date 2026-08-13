@@ -112,39 +112,39 @@ function Home() {
       </section>
 
       {/* ========================================
-          IMAGINE IF
-      ======================================== */}
-      <section className="home-imagine">
-        <div className="home-imagine-media">
-          <div className="home-imagine-placeholder">
-            <span>IMAGINE IF…</span>
+              IMAGINE IF
+          ======================================== */}
+          <section className="home-imagine">
+            <div className="home-imagine-media">
+              <img
+                src={homeImagineFeature}
+                alt="NDOSSEEYY Imagine If creative business concept"
+                className="home-imagine-image"
+              />
 
-            <div>
-              <p>Ordinary idea</p>
-              <span>→</span>
-              <p>Entire brand world</p>
+              <div className="home-imagine-media-label">
+                <span>IMAGINE IF…</span>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div className="home-imagine-copy">
-          <p className="home-section-label">Imagine If...</p>
+            <div className="home-imagine-copy">
+              <p className="home-section-label">Imagine If...</p>
 
-          <h2>
-            What if we took
-            something ordinary
-            seriously?
-          </h2>
+              <h2>
+                What if we took
+                something ordinary
+                seriously?
+              </h2>
 
-          <p>
-            A familiar product. A small stall. A service people see every day.
-            Then we reconsider the identity, presentation, photography,
-            packaging, customer and experience around it.
-          </p>
+              <p>
+                A familiar product. A small stall. A service people see every day.
+                Then we reconsider the identity, presentation, photography, packaging,
+                customer and experience around it.
+              </p>
 
-          <Link to="/media">See How NDOSSEEYY Thinks →</Link>
-        </div>
-      </section>
+              <Link to="/media">See How NDOSSEEYY Thinks →</Link>
+            </div>
+          </section>
 
       {/* ========================================
           FEATURED CONCEPTS
