@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-
 import Home from "./pages/Home";
 import Concepts from "./pages/Concepts";
 import ConceptDetail from "./pages/ConceptDetail";
@@ -12,6 +11,7 @@ import Work from "./pages/Work";
 import Media from "./pages/Media";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 
 function App() {
   return (
