@@ -172,7 +172,7 @@ function Footer() {
         </p>
 
         <p className="footer-philosophy">
-          Ideas Before They Become Obvious
+          Imagine It Differently
         </p>
 
         <div className="footer-legal">
