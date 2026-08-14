@@ -49,10 +49,10 @@ function Contact() {
       throw new Error("Form submission failed.");
     }
 
-    alert("Thank you. Your project enquiry has been sent.");
-
     form.reset();
     setProjectType("");
+
+    navigate("/thank-you");
   } catch (error) {
     console.error("Form submission error:", error);
 
