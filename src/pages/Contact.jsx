@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import "../styles/Contact.css";
 
 function Contact() {
