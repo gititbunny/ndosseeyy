@@ -30,13 +30,37 @@ function Contact() {
 
   const [projectType, setProjectType] = useState(getInitialProjectType());
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(formData).toString(),
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed.");
+    }
+
+    alert("Thank you. Your project enquiry has been sent.");
+
+    form.reset();
+    setProjectType("");
+  } catch (error) {
+    console.error("Form submission error:", error);
 
     alert(
-      "The NDOSSEEYY enquiry form is ready visually. We will connect real form submission before launch."
+      "Something went wrong while sending your enquiry. Please try again or email ndosseeyy@gmail.com."
     );
-  };
+  }
+};
 
   return (
     <main className="contact-page">
