@@ -1,8 +1,48 @@
 import { Link } from "react-router";
+import {
+  SiInstagram,
+  SiTiktok,
+  SiYoutube,
+  SiPinterest,
+  SiFacebook,
+  SiThreads,
+} from "react-icons/si";
+
 import "../styles/Footer.css";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
+  const socialLinks = [
+    {
+      name: "Instagram",
+      icon: <SiInstagram />,
+      url: null,
+    },
+    {
+      name: "TikTok",
+      icon: <SiTiktok />,
+      url: null,
+    },
+    {
+      name: "YouTube",
+      icon: <SiYoutube />,
+      url: null,
+    },
+    {
+      name: "Pinterest",
+      icon: <SiPinterest />,
+      url: null,
+    },
+    {
+      name: "Facebook",
+      icon: <SiFacebook />,
+      url: null,
+    },
+    {
+      name: "Threads",
+      icon: <SiThreads />,
+      url: null,
+    },
+  ];
 
   return (
     <footer className="footer">
@@ -10,24 +50,27 @@ function Footer() {
           FOOTER INTRO
       ======================================== */}
       <div className="footer-top">
-        <p className="footer-label">NDOSSEEYY</p>
+        <div className="footer-brand">
+          <Link to="/" className="footer-logo">
+            NDOSSEEYY
+          </Link>
 
-        <h2>
-          Ideas deserve
-          <br />
-          somewhere to become real.
-        </h2>
-      </div>
+          <p className="footer-brand-statement">
+            I imagine business ideas, brands and visual worlds differently.
+          </p>
 
-      {/* ========================================
-          FOOTER LINKS
-      ======================================== */}
-      <div className="footer-grid">
-        {/* Explore */}
+          <p className="footer-location">
+            Johannesburg · South Africa
+          </p>
+        </div>
+
+        {/* ========================================
+            NAVIGATION
+        ======================================== */}
         <div className="footer-column">
           <p className="footer-column-title">Explore</p>
 
-          <nav className="footer-links" aria-label="Footer navigation">
+          <nav className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/concepts">Concepts</Link>
             <Link to="/services">Services</Link>
@@ -37,47 +80,86 @@ function Footer() {
           </nav>
         </div>
 
-        {/* Work Together */}
+        {/* ========================================
+            WORK TOGETHER
+        ======================================== */}
         <div className="footer-column">
-          <p className="footer-column-title">Work Together</p>
+          <p className="footer-column-title">Work With Me</p>
 
-          <div className="footer-links">
+          <nav className="footer-links">
             <Link to="/contact">Start a Project</Link>
-            <Link to="/concepts">Acquire a Concept</Link>
-            <a href="mailto:ndosseeyy@gmail.com">
-              Email NDOSSEEYY
-            </a>
-          </div>
+
+            <Link to="/contact?service=custom-brand">
+              Custom Brand Creation
+            </Link>
+
+            <Link to="/contact?service=brand-elevation">
+              Brand Elevation
+            </Link>
+
+            <Link to="/contact?service=creative-design">
+              Creative Design
+            </Link>
+          </nav>
         </div>
 
-        {/* Social */}
-        <div className="footer-column">
-          <p className="footer-column-title">Follow</p>
-
-          <div className="footer-links footer-social-links">
-            <span>TikTok</span>
-            <span>Instagram</span>
-            <span>YouTube</span>
-          </div>
-
-          <p className="footer-social-note">
-            Social links will be connected once the NDOSSEEYY accounts are
-            ready.
-          </p>
-        </div>
-
-        {/* Contact */}
-        <div className="footer-column footer-contact-column">
+        {/* ========================================
+            CONTACT
+        ======================================== */}
+        <div className="footer-column footer-contact">
           <p className="footer-column-title">Contact</p>
 
-          <a
-            href="mailto:ndosseeyy@gmail.com"
-            className="footer-email"
-          >
+          <a href="mailto:ndosseeyy@gmail.com">
             ndosseeyy@gmail.com
           </a>
 
-          <p>Johannesburg, South Africa</p>
+          <Link to="/contact" className="footer-project-link">
+            Tell me what you're imagining →
+          </Link>
+        </div>
+      </div>
+
+      {/* ========================================
+          SOCIALS
+      ======================================== */}
+      <div className="footer-social-section">
+        <p>Find NDOSSEEYY</p>
+
+        <div className="footer-socials">
+          {socialLinks.map((social) =>
+            social.url ? (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-link"
+                aria-label={`NDOSSEEYY on ${social.name}`}
+              >
+                <span className="footer-social-icon">
+                  {social.icon}
+                </span>
+
+                <span className="footer-social-name">
+                  {social.name}
+                </span>
+              </a>
+            ) : (
+              <div
+                key={social.name}
+                className="footer-social-link footer-social-link-disabled"
+                aria-label={`${social.name} profile`}
+              >
+                <span className="footer-social-icon">
+                  {social.icon}
+                </span>
+
+                <span className="footer-social-name">
+                  {social.name}
+                </span>
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -85,14 +167,17 @@ function Footer() {
           FOOTER BOTTOM
       ======================================== */}
       <div className="footer-bottom">
-        <div>
-          <p>© {currentYear} NDOSSEEYY</p>
-          <p>Ideas Before They Become Obvious.</p>
-        </div>
+        <p>
+          © {new Date().getFullYear()} NDOSSEEYY
+        </p>
 
-        <div className="footer-bottom-right">
-          <span>Privacy — coming before launch</span>
-          <span>Terms — coming before launch</span>
+        <p className="footer-philosophy">
+          Ideas Before They Become Obvious
+        </p>
+
+        <div className="footer-legal">
+          <span>Privacy</span>
+          <span>Terms</span>
         </div>
       </div>
     </footer>
