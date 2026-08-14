@@ -105,7 +105,24 @@ function Contact() {
           </span>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form
+          className="contact-form"
+          name="ndosseeyy-contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+        >
+          <input
+            type="hidden"
+            name="form-name"
+            value="ndosseeyy-contact"
+          />
+
+          <input
+            type="hidden"
+            name="bot-field"
+          />
           {/* Name */}
           <div className="form-field form-field-half">
             <label htmlFor="name">
