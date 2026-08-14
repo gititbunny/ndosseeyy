@@ -4,7 +4,7 @@ import "../styles/Contact.css";
 
 function Contact() {
   const [searchParams] = useSearchParams();
-
+  const navigate = useNavigate();
   const conceptParam = searchParams.get("concept");
   const serviceParam = searchParams.get("service");
 
