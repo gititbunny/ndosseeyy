@@ -28,6 +28,7 @@ function App() {
         <Route path="/media" element={<Media />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
 
       <Footer />
