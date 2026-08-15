@@ -813,7 +813,6 @@
 
 .home-about-copy h2 {
   margin-top: 40px;
-
   font-size: clamp(4rem, 7vw, 7.5rem);
   font-weight: 500;
   line-height: 0.88;
