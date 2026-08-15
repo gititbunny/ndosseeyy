@@ -399,16 +399,4 @@
     width: 100%;
     min-width: 0;
   }
-
-  .contact-direct {
-    padding: 75px 24px 90px;
-  }
-
-  .contact-direct-content {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-direct-content > div {
-    min-height: 190px;
-  }
 }
