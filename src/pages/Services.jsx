@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import { Link } from "react-router";
+import servicesVisualBreak from "../assets/images/work/work-003-cover.jpg";
+import playbookVisual from "../assets/images/media/media-008.jpg";
 import "../styles/Services.css";
 
 function Services() {
@@ -124,37 +126,49 @@ function Services() {
           CORE SERVICES
       ======================================== */}
       <section className="services-list">
-        {services.map((service) => (
-          <article className="service-row" key={service.number}>
-            <div className="service-number">
-              <span>{service.number}</span>
-            </div>
-
-            <div className="service-main">
-              <p className="service-statement">{service.statement}</p>
-
-              <h2>{service.title}</h2>
-
-              <p className="service-description">{service.description}</p>
-
-              <Link to={service.link} className="service-link">
-                {service.action} →
-              </Link>
-            </div>
-
-            <div className="service-details">
-              <div className="service-price">
-                <span>Projects</span>
-                <strong>{service.price}</strong>
+        {services.map((service, index) => (
+          <Fragment key={service.number}>
+            <article className="service-row">
+              <div className="service-number">
+                <span>{service.number}</span>
               </div>
 
-              <ul>
-                {service.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </article>
+              <div className="service-main">
+                <p className="service-statement">{service.statement}</p>
+
+                <h2>{service.title}</h2>
+
+                <p className="service-description">{service.description}</p>
+
+                <Link to={service.link} className="service-link">
+                  {service.action} →
+                </Link>
+              </div>
+
+              <div className="service-details">
+                <div className="service-price">
+                  <span>Projects</span>
+                  <strong>{service.price}</strong>
+                </div>
+
+                <ul>
+                  {service.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+
+            {index === 1 && (
+              <div className="services-visual-break">
+                <img
+                  src={servicesVisualBreak}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </Fragment>
         ))}
       </section>
 
@@ -173,7 +187,14 @@ function Services() {
         </div>
 
         <div className="service-addons-grid">
-          <article className="service-addon">
+          <article className="service-addon service-addon-visual">
+            <img
+              src={playbookVisual}
+              alt=""
+              className="service-addon-image"
+              loading="lazy"
+            />
+
             <div className="service-addon-top">
               <span>ND / PLAYBOOK</span>
               <span>From R7,500</span>
