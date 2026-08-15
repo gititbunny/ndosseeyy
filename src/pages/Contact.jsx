@@ -318,31 +318,6 @@ function Contact() {
           </div>
         </form>
       </section>
-
-      {/* ========================================
-          DIRECT CONTACT
-      ======================================== */}
-      <section className="contact-direct">
-        <div className="contact-direct-label">
-          <p>Prefer something simpler?</p>
-        </div>
-
-        <div className="contact-direct-content">
-          <div>
-            <span>Email</span>
-
-            <a href="mailto:ndosseeyy@gmail.com">
-              ndosseeyy@gmail.com
-            </a>
-          </div>
-
-          <div>
-            <span>WhatsApp</span>
-
-            <p>Business WhatsApp coming soon.</p>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
