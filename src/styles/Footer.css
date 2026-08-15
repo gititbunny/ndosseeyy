@@ -253,6 +253,14 @@ a.footer-social-link:hover {
   gap: 22px;
 }
 
+.footer-legal a {
+  transition: opacity 0.25s ease;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+}
+
 
 /* ========================================
    TABLET
