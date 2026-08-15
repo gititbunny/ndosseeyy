@@ -37,6 +37,7 @@ function App() {
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       </div>
       <Footer />
