@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ScrollReveal from "./components/ScrollReveal";
 
 function App() {
   return (
