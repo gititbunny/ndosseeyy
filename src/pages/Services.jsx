@@ -216,7 +216,13 @@ function Services() {
             </div>
           </article>
 
-          <article className="service-addon">
+          <article className="service-addon service-addon-visual">
+            <img
+              src={strategyVisual}
+              alt=""
+              className="service-addon-image"
+              loading="lazy"
+            />
             <div className="service-addon-top">
               <span>ND / SESSION</span>
               <span>From R1,500</span>
