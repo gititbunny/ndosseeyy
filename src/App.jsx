@@ -14,6 +14,7 @@ import ThankYou from "./pages/ThankYou";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import ScrollReveal from "./components/ScrollReveal";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const location = useLocation();
