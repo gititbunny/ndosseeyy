@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Link } from "react-router";
 import servicesVisualBreak from "../assets/images/work/work-003-cover.jpg";
 import playbookVisual from "../assets/images/media/media-008.jpg";
+import strategyVisual from "../assets/images/media/media-004.jpg";
 import "../styles/Services.css";
 
 function Services() {
