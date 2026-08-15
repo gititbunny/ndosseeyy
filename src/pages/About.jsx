@@ -1,6 +1,11 @@
 import { Link } from "react-router";
 import aninEditorial from "../assets/images/about/about-anin-editorial.png";
 import aboutCreativeFilm from "../assets/videos/about/about-creative-film.mp4";
+import aboutVisualBreak from "../assets/images/media/media-005.jpg";
+import aboutCreativeVisual from "../assets/images/home/home-media-03.jpg";
+import aboutTechnicalVisual from "../assets/images/concepts/concept-001-digital-01.jpg";
+import aboutJourney01 from "../assets/images/work/work-001-cover.jpg";
+import aboutJourney02 from "../assets/images/media/media-001.jpg";
 import "../styles/About.css";
 
 function About() {
