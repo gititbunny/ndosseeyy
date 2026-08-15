@@ -17,13 +17,13 @@ import ScrollReveal from "./components/ScrollReveal";
 
 function App() {
   const location = useLocation();
-  
+
   return (
     <>
       <ScrollToTop />
       <ScrollReveal />
       <Navbar />
-
+      <div key={location.pathname} className="page-transition">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/concepts" element={<Concepts />} />
@@ -37,7 +37,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
       </Routes>
-
+      </div>
       <Footer />
     </>
   );
