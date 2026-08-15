@@ -16,6 +16,8 @@ import Terms from "./pages/Terms";
 import ScrollReveal from "./components/ScrollReveal";
 
 function App() {
+  const location = useLocation();
+  
   return (
     <>
       <ScrollToTop />
