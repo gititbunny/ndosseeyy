@@ -176,8 +176,8 @@ function Footer() {
         </p>
 
         <div className="footer-legal">
-          <span>Privacy</span>
-          <span>Terms</span>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
         </div>
       </div>
     </footer>
