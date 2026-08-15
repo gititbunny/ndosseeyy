@@ -92,3 +92,68 @@ select {
     transition: none;
   }
 }
+
+/* ========================================
+   PAGE TRANSITION
+======================================== */
+
+.page-transition {
+  animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ========================================
+   INTERACTION POLISH
+======================================== */
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active,
+button:active {
+  transform: translateY(1px);
+}
+
+
+/* ========================================
+   KEYBOARD FOCUS
+======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+
+  a:active,
+  button:active {
+    transform: none;
+  }
+}
