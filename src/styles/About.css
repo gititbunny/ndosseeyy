@@ -245,6 +245,24 @@
   line-height: 1.75;
 }
 
+/* ========================================
+   EDITORIAL VISUAL BREAK
+======================================== */
+
+.about-visual-break {
+  padding: 0 40px 18px;
+}
+
+.about-visual-break img {
+  width: 100%;
+  height: min(72vh, 820px);
+  min-height: 560px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
 
 /* ========================================
    CREATIVE + TECHNICAL
@@ -324,6 +342,57 @@
   opacity: 0.75;
 }
 
+/* ========================================
+   DUALITY VISUAL CARDS
+======================================== */
+
+.about-duality-card-visual {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.about-duality-card-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.7;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-duality-card-visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 0.3),
+      rgba(17, 17, 17, 0.78)
+    );
+}
+
+.about-duality-card-visual > span,
+.about-duality-card-visual > h3,
+.about-duality-card-visual > p {
+  position: relative;
+
+  z-index: 2;
+}
+
+.about-duality-card-visual:hover .about-duality-card-image {
+  transform: scale(1.035);
+}
 
 /* ========================================
    DISCIPLINES
@@ -435,6 +504,48 @@
 
   font-size: 0.9rem;
   line-height: 1.7;
+}
+
+/* ========================================
+   JOURNEY VISUALS
+======================================== */
+
+.about-journey-media {
+  margin-top: 75px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: end;
+  gap: 18px;
+}
+
+.about-journey-image {
+  overflow: hidden;
+
+  background: #d8d4cc;
+}
+
+.about-journey-image-large {
+  height: 620px;
+}
+
+.about-journey-image-small {
+  height: 470px;
+}
+
+.about-journey-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-journey-image:hover img {
+  transform: scale(1.025);
 }
 
 
@@ -667,5 +778,37 @@
 
   .about-ending h2 {
     font-size: clamp(3.5rem, 16vw, 5.8rem);
+  }
+
+    /* ========================================
+     ABOUT VISUAL BREAK
+  ======================================== */
+
+  .about-visual-break {
+    padding: 0 24px 12px;
+  }
+
+  .about-visual-break img {
+    height: 480px;
+    min-height: 0;
+  }
+
+
+  /* ========================================
+     JOURNEY VISUALS
+  ======================================== */
+
+  .about-journey-media {
+    margin-top: 55px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .about-journey-image-large {
+    height: 480px;
+  }
+
+  .about-journey-image-small {
+    height: 390px;
   }
 }
