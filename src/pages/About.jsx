@@ -123,6 +123,17 @@ function About() {
       </section>
 
       {/* ========================================
+              EDITORIAL VISUAL BREAK
+          ======================================== */}
+          <section className="about-visual-break">
+            <img
+              src={aboutVisualBreak}
+              alt=""
+              loading="lazy"
+            />
+          </section>
+
+      {/* ========================================
           CREATIVE + TECHNICAL
       ======================================== */}
       <section className="about-duality">
@@ -139,7 +150,14 @@ function About() {
         </div>
 
         <div className="about-duality-grid">
-          <article className="about-duality-card">
+         <article className="about-duality-card about-duality-card-visual">
+            <img
+              src={aboutCreativeVisual}
+              alt=""
+              className="about-duality-card-image"
+              loading="lazy"
+            />
+
             <span>01 / Creative</span>
 
             <h3>Design</h3>
@@ -151,7 +169,14 @@ function About() {
             </p>
           </article>
 
-          <article className="about-duality-card">
+          <article className="about-duality-card about-duality-card-visual">
+            <img
+              src={aboutTechnicalVisual}
+              alt=""
+              className="about-duality-card-image"
+              loading="lazy"
+            />
+
             <span>02 / Technical</span>
 
             <h3>Technology</h3>
@@ -210,6 +235,27 @@ function About() {
             Technology taught me to build.
           </h2>
         </div>
+        
+        {/* ========================================
+                JOURNEY VISUALS
+            ======================================== */}
+            <div className="about-journey-media">
+              <div className="about-journey-image about-journey-image-large">
+                <img
+                  src={aboutJourney01}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="about-journey-image about-journey-image-small">
+                <img
+                  src={aboutJourney02}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
 
         <div className="about-timeline">
           <article className="about-timeline-item">
