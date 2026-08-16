@@ -321,7 +321,6 @@
 .service-addon-visual .service-addon-top,
 .service-addon-visual .service-addon-content {
   position: relative;
-
   z-index: 2;
 }
 
