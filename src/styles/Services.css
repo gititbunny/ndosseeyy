@@ -363,7 +363,6 @@
 
 .services-ending a {
   flex-shrink: 0;
-
   padding-bottom: 4px;
   border-bottom: 1px solid currentColor;
   font-size: 0.78rem;
