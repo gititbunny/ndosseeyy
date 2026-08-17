@@ -219,7 +219,6 @@
 .service-addon {
   min-height: 520px;
   padding: 28px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
