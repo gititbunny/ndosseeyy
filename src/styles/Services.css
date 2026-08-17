@@ -181,7 +181,6 @@
   width: 100%;
   height: min(68vh, 760px);
   min-height: 540px;
-
   display: block;
   object-fit: cover;
   object-position: center;
