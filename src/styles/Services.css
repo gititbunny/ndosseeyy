@@ -100,7 +100,6 @@
 
 .service-main h2 {
   max-width: 700px;
-
   font-size: clamp(3rem, 5.5vw, 6rem);
   font-weight: 500;
   line-height: 0.92;
