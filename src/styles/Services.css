@@ -46,7 +46,6 @@
 
 .services-intro h1 {
   max-width: 1050px;
-
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 500;
   line-height: 0.88;
