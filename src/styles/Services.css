@@ -72,7 +72,6 @@
 .service-row {
   min-height: 620px;
   padding: 70px 40px;
-
   display: grid;
   grid-template-columns: 0.18fr 1.1fr 0.72fr;
   gap: 50px;
