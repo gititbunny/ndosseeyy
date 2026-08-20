@@ -758,7 +758,6 @@
 
   .about-philosophy blockquote {
     margin-top: 55px;
-
     font-size: clamp(3.3rem, 15vw, 5.5rem);
   }
 
